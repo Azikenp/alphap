@@ -5,7 +5,6 @@ export const menuOne = [
   { title: "reports", src: "/icons/reports-icon.png" },
 ];
 export const menuTwo = [
-  { title: "notifications", src: "/icons/notifications-icon.png" },
   { title: "messages", src: "/icons/messages-icon.png" },
   { title: "settings", src: "/icons/settings-icon.png" },
 ];

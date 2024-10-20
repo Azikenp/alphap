@@ -9,6 +9,8 @@ const MobileNav = () => {
     setIsOpen((prev) => !prev);
   };
 
+  //{`${isOpen? "h-screen" : "h-0"}`}
+
   return (
     <div className="h-screen">
       <div className="border-b-[1px] border-[#E2E8F0] mb-[8px]">
@@ -28,44 +30,73 @@ const MobileNav = () => {
         </div>
       </div>
 
-      <div className="px-[20px] flex flex-col items-start gap-2 mb-2">
-        {menuOne.map((item) => {
-          return (
-            <div
-              key={item.title}
-              className=" w-full flex p-2 items-center gap-4 cursor-pointer"
-            >
-              <img className="w-5 h-5" src={item.src} alt="" />
+      <div className={`${isOpen ? "h-full" : "hidden"} transition duration-500`}>
+        <div className="px-[20px] flex flex-col items-start gap-2 mb-2">
+          {menuOne.map((item) => {
+            return (
+              <div
+                key={item.title}
+                className=" w-full flex p-2 items-center gap-4 cursor-pointer"
+              >
+                <img className="w-5 h-5" src={item.src} alt="" />
+                <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
+                  {item.title}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="px-[20px] flex flex-col items-start gap-2">
+          <div className="w-full flex p-2 items-center cursor-pointer">
+            <div className="w-full flex items-center gap-4">
+              <img
+                className="w-5 h-5"
+                src="/icons/notifications-icon.png"
+                alt=""
+              />
               <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
-                {item.title}
+                notifications
               </p>
             </div>
-          );
-        })}
-      </div>
+            <div className="w-6 h-6 flex items-center justify-center gap-[4px] bg-[#F43F5E] rounded-full">
+              <p className="text-[#fff] text-[12px] font-normal leading-4">3</p>
+            </div>
+          </div>
 
-      <div className="px-[20px] flex flex-col items-start gap-2">
-        {menuTwo.map((item) => {
-          return (
-            <div
-              key={item.title}
-              className=" w-full flex p-2 items-center gap-4 cursor-pointer"
-            >
-              <img className="w-5 h-5" src={item.src} alt="" />
-              <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
-                {item.title}
+          {menuTwo.map((item) => {
+            return (
+              <div
+                key={item.title}
+                className=" w-full flex p-2 items-center gap-4 cursor-pointer"
+              >
+                <img className="w-5 h-5" src={item.src} alt="" />
+                <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
+                  {item.title}
+                </p>
+              </div>
+            );
+          })}
+
+          <div className="flex gap-2 px-2 items-center">
+            <div className="w-6 h-4 flex items-center p-[2px] bg-[#E2E8F0] rounded-full cursor-pointer">
+              <div className="w-[50%] h-full rounded-full bg-[#fff]"></div>
+            </div>
+            <p className="text-[#334155] text-[12px] font-normal leading-4">
+              Dark mode
+            </p>
+          </div>
+
+          <div className="flex items-center py-2 gap-2">
+            <img src="/icons/profile-icon.png" alt="profile-img" />
+            <div>
+              <h3 className="text-[#334155] text-[12px] font-normal leading-4">
+                Rudra Devi
+              </h3>
+              <p className="text-[#64748B] text-[12px] font-normal leading-4">
+                rudra.devi@gmail.com
               </p>
             </div>
-          );
-        })}
-
-        <div></div>
-
-        <div className="flex items-center py-2 gap-2">
-          <img src="/icons/profile-icon.png" alt="profile-img" />
-          <div>
-            <h3>Rudra Devi</h3>
-            <p>rudra.devi@gmail.com</p>
           </div>
         </div>
       </div>
