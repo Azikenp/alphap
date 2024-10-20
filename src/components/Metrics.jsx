@@ -4,8 +4,8 @@ import { metricSvg } from "./Svgs";
 const Metrics = () => {
   return (
     <div>
-      <div className="flex flex-col gap-3 px-5">
-        <h2 className="text-[#000] text-[17px] md:text-[22px] font-normal leading-5">
+      <div className="flex flex-col gap-3 px-5 md:px-7 md:py-8">
+        <h2 className="text-[#000] text-[17px] md:text-[22px] font-normal leading-5 md:mb-6">
           Welcome! here&apos;s your summary
         </h2>
         <div className="flex flex-col gap-3 md:flex-row">
@@ -13,7 +13,7 @@ const Metrics = () => {
             return (
               <div
                 key={metric.title}
-                className="flex justify-center flex-col gap-1 p-4 border border-#F2F2F7] bg-[#ffffff] rounded-[2px]"
+                className="flex justify-center flex-col gap-1 p-4 border border-#F2F2F7] bg-[#ffffff] rounded-[2px] md:w-[240px] md:h-[88px]"
               >
                 <div className="flex items-center gap-1">
                   <p className="text-[#64748B] text-[16px] font-semibold leading-6">
