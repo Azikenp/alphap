@@ -8,6 +8,9 @@ export default {
         md: "768px",
         lg: "1024px",
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'], 
+      },
     },
   },
   plugins: [],

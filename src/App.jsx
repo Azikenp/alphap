@@ -2,7 +2,7 @@ import MobileNav from "./components/MobileNav";
 
 export default function App() {
   return (
-    <div>
+    <div className="bg-[#FFFFFF]">
       <MobileNav />
     </div>
   );
