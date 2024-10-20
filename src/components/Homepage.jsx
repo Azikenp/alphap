@@ -1,3 +1,4 @@
+import ContentBody from "./ContentBody";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 
@@ -7,6 +8,9 @@ const Homepage = () => {
       <div>
         <Nav />
         <MobileNav />
+      </div>
+      <div>
+        <ContentBody />
       </div>
     </div>
   );

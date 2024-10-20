@@ -27,6 +27,7 @@ export const menuOneCollapsed = [
     src2: "/icons/reports-icon.png",
   },
 ];
+
 export const menuTwoCollapsed = [
   {
     title: "messages",
@@ -37,5 +38,36 @@ export const menuTwoCollapsed = [
     title: "settings",
     src: "/icons/settings-icon.png",
     src2: "/icons/settings-icon.png",
+  },
+];
+
+export const metrics = [
+  {
+    title: "Total Events",
+    subject: "100,000",
+    image: "/icons/arrow-success.png",
+    percentage: "+5.0%",
+    success: true
+  },
+  {
+    title: "Active Speakers",
+    subject: "25",
+    image: "/icons/arrow-danger.png",
+    percentage: "-5.0%",
+    success: false
+  },
+  {
+    title: "Total Registrations",
+    subject: "300",
+    image: "/icons/arrow-success.png",
+    percentage: "+5.0%",
+    success: true
+  },
+  {
+    title: "Total Revenue",
+    subject: "$500,000",
+    image: "/icons/arrow-success.png",
+    percentage: "+5.0%",
+    success: true
   },
 ];
