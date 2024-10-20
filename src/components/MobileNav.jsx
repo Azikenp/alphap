@@ -12,7 +12,7 @@ const MobileNav = () => {
   //{`${isOpen? "h-screen" : "h-0"}`}
 
   return (
-    <div className="h-screen">
+    <div className={`${isOpen ? "h-screen" : ""} md:hidden`}>
       <div className="border-b-[1px] border-[#E2E8F0] mb-[8px]">
         <div className="flex items-center justify-between p-[16px]">
           <div className="w-[64px] h-[32px] cursor-pointer">
@@ -30,7 +30,11 @@ const MobileNav = () => {
         </div>
       </div>
 
-      <div className={`${isOpen ? "h-full" : "hidden"} transition duration-500`}>
+      <div
+        className={`overflow-hidden transition-max-height duration-500 ${
+          isOpen ? "max-h-full" : "max-h-0"
+        }`}
+      >
         <div className="px-[20px] flex flex-col items-start gap-2 mb-2">
           {menuOne.map((item) => {
             return (
@@ -89,11 +93,9 @@ const MobileNav = () => {
 
           <div className="flex items-center py-2 gap-2">
             <img src="/icons/profile-icon.png" alt="profile-img" />
-            <div>
-              <h3 className="text-[#334155] text-[12px] font-normal leading-4">
-                Rudra Devi
-              </h3>
-              <p className="text-[#64748B] text-[12px] font-normal leading-4">
+            <div className="text-[12px] font-normal">
+              <h3 className="text-[#334155] leading-4">Rudra Devi</h3>
+              <p className="text-[#64748B] text-[12px] leading-4">
                 rudra.devi@gmail.com
               </p>
             </div>

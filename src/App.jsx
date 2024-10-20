@@ -1,9 +1,9 @@
-import MobileNav from "./components/MobileNav";
+import Homepage from "./components/Homepage";
 
 export default function App() {
   return (
     <div className="bg-[#FFFFFF]">
-      <MobileNav />
+      <Homepage />
     </div>
   );
 }
