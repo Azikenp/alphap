@@ -47,27 +47,48 @@ export const metrics = [
     subject: "100,000",
     image: "/icons/arrow-success.png",
     percentage: "+5.0%",
-    success: true
+    success: true,
   },
   {
     title: "Active Speakers",
     subject: "25",
     image: "/icons/arrow-danger.png",
     percentage: "-5.0%",
-    success: false
+    success: false,
   },
   {
     title: "Total Registrations",
     subject: "300",
     image: "/icons/arrow-success.png",
     percentage: "+5.0%",
-    success: true
+    success: true,
   },
   {
     title: "Total Revenue",
     subject: "$500,000",
     image: "/icons/arrow-success.png",
     percentage: "+5.0%",
-    success: true
+    success: true,
+  },
+];
+
+export const carousel = [
+  {
+    image: "/slider 1.png",
+    title: "Latest News & Updates",
+    text: "Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.",
+    value: 1,
+  },
+  {
+    image: "/slider 2.png",
+    title: "Latest News & Updates",
+    text: "Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.",
+    value: 2,
+  },
+  {
+    image: "/slider 3.png",
+    title: "Latest News & Updates",
+    text: "Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.",
+    value: 3,
   },
 ];

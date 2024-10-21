@@ -9,11 +9,15 @@ export default {
         lg: "1024px",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'], 
+        inter: ["Inter", "sans-serif"],
       },
       maxHeight: {
-        '0': '0',
-        '200': '200px',
+        0: "0",
+        200: "200px",
+      },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 65%)",
       },
     },
   },
