@@ -5,22 +5,29 @@ import { nextBtn, prevBtn } from "./Svgs";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [isSliding, setIsSliding] = useState(false);
   const interval = 6000; // Define interval for auto-slide
 
   // Function to move to the previous slide
   const prevSlide = () => {
-    setProgress(0); // Reset progress
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? carousel.length - 1 : prevIndex - 1
-    );
+    if (!isSliding) {
+      setIsSliding(true);
+      setProgress(0); // Reset progress
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? carousel.length - 1 : prevIndex - 1
+      );
+    }
   };
 
   // Function to move to the next slide
   const nextSlide = () => {
-    setProgress(0); // Reset progress
-    setCurrentIndex((prevIndex) =>
-      prevIndex === carousel.length - 1 ? 0 : prevIndex + 1
-    );
+    if (!isSliding) {
+      setIsSliding(true);
+      setProgress(0); // Reset progress
+      setCurrentIndex((prevIndex) =>
+        prevIndex === carousel.length - 1 ? 0 : prevIndex + 1
+      );
+    }
   };
 
   // Auto-slide effect with progress bar
@@ -38,15 +45,37 @@ const Carousel = () => {
     return () => clearInterval(progressInterval);
   }, [currentIndex]);
 
+  // Reset sliding state after the transition
+  useEffect(() => {
+    const resetSliding = setTimeout(() => {
+      setIsSliding(false);
+    }, 500); // Match the CSS transition duration (500ms)
+
+    return () => clearTimeout(resetSliding);
+  }, [currentIndex]);
+
   return (
     <div className="px-5 flex-1">
       {/* Display the current item */}
-      <div className="h-[320px] w-full shrink-0 relative">
-        <img
-          className="h-full w-full"
-          src={carousel[currentIndex].image}
-          alt=""
-        />
+      <div className="h-[320px] w-full shrink-0 relative overflow-hidden">
+        {carousel.map((item, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
+              index === currentIndex
+                ? "translate-x-0" // Current image stays
+                : index < currentIndex
+                ? "-translate-x-full" // Slide out to the left
+                : "translate-x-full" // Slide in from the right
+            }`}
+          >
+            <img
+              className="h-full w-full object-cover"
+              src={item.image}
+              alt={item.title}
+            />
+          </div>
+        ))}
 
         {/* prev and next buttons */}
         <div className="absolute top-[148px] flex items-center justify-between p-4 w-full">
