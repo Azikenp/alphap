@@ -4,7 +4,7 @@ import TabulatedData from "./TabulatedData";
 const Events = () => {
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col md:flex-row md:items-center md:flex-wrap justify-between gap-2.5 md:gap-2 md:h-9">
+      <div className="flex flex-col px-5 md:flex-row md:items-center md:flex-wrap justify-between gap-2.5 md:gap-2 md:h-9">
         <div className="flex w-full p-2 items-center gap-2 border border-[#E2E8F0] rounded-[2px] md:w-[200px] h-full">
           <img className="w-4 h-4" src="/icons/search-icon.png" alt="" />
           <input

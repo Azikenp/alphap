@@ -92,7 +92,12 @@ export const carousel = [
     value: 3,
   },
 ];
-export const tableHeader = ["Event Name", "Date", "Speaker", "Status"];
+export const tableHeader = [
+  { name: "Event Name" },
+  { name: "Date" },
+  { name: "Speaker" },
+  { name: "Status" },
+];
 
 export const tableData = [
   {
