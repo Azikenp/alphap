@@ -1,8 +1,13 @@
+import MobileTabulatedData from "./MobileTabulatedData"
+import TabletTabulatedData from "./TabletTabulatedData"
 
 
 const TabulatedData = () => {
   return (
-    <div>TabulatedData</div>
+    <div>
+      <MobileTabulatedData />
+      <TabletTabulatedData />
+    </div>
   )
 }
 
