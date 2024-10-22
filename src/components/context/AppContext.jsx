@@ -26,16 +26,18 @@ export const AppProvider = ({ children }) => {
 
   // Function to handle search input
   const handleSearch = (e) => {
-    const query = e.target.value;
+    const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
-    // If search query is empty, return the original data
     if (query === "") {
-      setDisplayData(originalData);
+      setDisplayData(originalData); // Reset to original data when search is cleared
     } else {
-      // Filter the data based on the search query
-      const filteredData = originalData.filter((item) =>
-        item.title.toLowerCase().includes(query.toLowerCase())
+      // Filter the data based on title, speaker, or status
+      const filteredData = originalData.filter(
+        (item) =>
+          item.title.toLowerCase().includes(query) ||
+          item.speaker.toLowerCase().includes(query) ||
+          item.status.toLowerCase().includes(query)
       );
       setDisplayData(filteredData);
     }
