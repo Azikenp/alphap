@@ -4,7 +4,7 @@ import TabulatedData from "./TabulatedData";
 import { AppContext } from "./context/AppContext";
 
 const Events = () => {
-  const { handleSort, handleSearch, searchQuery } = useContext(AppContext);
+  const { handleSort, handleSearch, searchQuery, displayData } = useContext(AppContext);
 
   return (
     <div className="flex flex-col gap-4">
@@ -45,7 +45,7 @@ const Events = () => {
         </div>
 
         <p className="text-[#334155] text-[14px] font-semibold leading-5 md:mr-4">
-          Displaying 100 Results
+          Displaying {displayData.length} Results
         </p>
 
         <div className="flex items-center justify-between md:gap-2 text-[#334155] text-[14px]">
