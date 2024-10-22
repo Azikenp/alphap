@@ -1,9 +1,11 @@
-import { useState } from "react";
-import { tableData } from "./data";
+import { useState, useContext } from "react";
+// import { tableData } from "./data";
 import { arrowDown, arrowRight } from "./Svgs";
+import { AppContext } from "./context/AppContext";
 
 const MobileTabulatedData = () => {
-  
+  const { displayData } = useContext(AppContext);
+
   //   const [isCollapsed, setIsCollapsed] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -21,7 +23,7 @@ const MobileTabulatedData = () => {
         </div>
 
         <div>
-          {tableData.map((data, index) => {
+          {displayData.map((data, index) => {
             return (
               <div key={data.id}>
                 <div
