@@ -14,6 +14,23 @@ export const AppProvider = ({ children }) => {
   const [sortConfig, setSortConfig] = useState({ key: "", direction: "asc" });
   const [isSorted, setIsSorted] = useState(false); // To check if sorted state is active
 
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to handle table row click
+  const handleTitleClick = (item) => {
+    setSelectedItem(item); // Set the clicked item details
+    setIsModalOpen(true); // Open the modal
+    console.log("hi");
+    
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
+
   // Function to handle sorting
   const handleSort = (key) => {
     let direction = "asc";
@@ -72,7 +89,16 @@ export const AppProvider = ({ children }) => {
   }, [sortConfig, displayData, isSorted]);
   return (
     <AppContext.Provider
-      value={{ handleSort, handleSearch, searchQuery, displayData }}
+      value={{
+        handleSort,
+        handleSearch,
+        searchQuery,
+        displayData,
+        handleTitleClick,
+        closeModal,
+        isModalOpen,
+        selectedItem,
+      }}
     >
       {children}
     </AppContext.Provider>

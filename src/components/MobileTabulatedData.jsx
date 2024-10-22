@@ -4,7 +4,7 @@ import { arrowDown, arrowRight } from "./Svgs";
 import { AppContext } from "./context/AppContext";
 
 const MobileTabulatedData = () => {
-  const { displayData } = useContext(AppContext);
+  const { displayData, handleTitleClick } = useContext(AppContext);
 
   //   const [isCollapsed, setIsCollapsed] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -27,7 +27,10 @@ const MobileTabulatedData = () => {
             return (
               <div key={data.id}>
                 <div
-                  onClick={() => handleClick(index)}
+                  onClick={() => {
+                    handleClick(index);
+                    handleTitleClick(data);
+                  }}
                   className={`flex items-center  px-[10px] py-[8px] gap-4 cursor-pointer h-10 relative ${
                     activeIndex === index &&
                     "p-4 border-b border-[#FCF7FF] bg-[#F2F2F7]"
