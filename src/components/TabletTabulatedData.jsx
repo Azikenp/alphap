@@ -1,7 +1,13 @@
-import { tableData } from "./data";
+import { useContext } from "react";
+// import { tableData } from "./data";
 import { blueDot, greenDot } from "./Svgs";
+import { AppContext } from "./context/AppContext";
 
 const TabletTabulatedData = () => {
+  const { displayData } = useContext(AppContext);
+
+  console.log(displayData);
+
   return (
     <div className="hidden lg:flex">
       <table className="w-full">
@@ -23,7 +29,7 @@ const TabletTabulatedData = () => {
         </thead>
 
         <tbody>
-          {tableData.map((item) => (
+          {displayData.map((item) => (
             <tr key={item.id} className="h-12 text-left">
               <td className="text-[#334155] text-[14px] font-normal leading-5 px-4">
                 {item.title}

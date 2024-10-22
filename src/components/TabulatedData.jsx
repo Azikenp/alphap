@@ -3,6 +3,7 @@ import TabletTabulatedData from "./TabletTabulatedData"
 
 
 const TabulatedData = () => {
+  
   return (
     <div>
       <MobileTabulatedData />

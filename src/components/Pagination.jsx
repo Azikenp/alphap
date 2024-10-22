@@ -1,6 +1,7 @@
 import { arrowDown, nextBtn, prevBtn } from "./Svgs";
 
 const Pagination = () => {
+  
   return (
     <div>
       <div className="flex items-center justify-between px-5">

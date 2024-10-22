@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { arrowDown, downloadIcon, verticalDotsIcon } from "./Svgs";
 import TabulatedData from "./TabulatedData";
+import { AppContext } from "./context/AppContext";
 
 const Events = () => {
+  const { handleSort, handleSearch, searchQuery } = useContext(AppContext);
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col px-5 md:flex-row md:items-center md:flex-wrap justify-between gap-2.5 md:gap-2 md:h-9">
@@ -11,20 +15,31 @@ const Events = () => {
             type="text"
             className="w-full text-[#CBD5E1] text-[14px] font-normal leading-5 outline-none"
             placeholder="Search"
+            value={searchQuery}
+            onChange={handleSearch}
           />
         </div>
 
-        <div className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] cursor-pointer h-full">
+        <div
+          onClick={() => handleSort("date")}
+          className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] cursor-pointer h-full"
+        >
           <p className="text-[14px] font-normal leading-5">Date</p>
           {arrowDown}
         </div>
 
-        <div className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] cursor-pointer h-full">
+        <div
+          onClick={() => handleSort("status")}
+          className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] cursor-pointer h-full"
+        >
           <p className="text-[14px] font-normal leading-5">Status</p>
           {arrowDown}
         </div>
 
-        <div className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] cursor-pointer h-full">
+        <div
+          onClick={() => handleSort("speaker")}
+          className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] cursor-pointer h-full"
+        >
           <p className="text-[14px] font-normal leading-5">Name</p>
           {arrowDown}
         </div>
@@ -35,7 +50,10 @@ const Events = () => {
 
         <div className="flex items-center justify-between md:gap-2 text-[#334155] text-[14px]">
           <p className="font-normal leading-5">Sort:</p>
-          <div className="flex items-center justify-center gap-2 px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] cursor-pointer h-full">
+          <div
+            onClick={() => handleSort("date")}
+            className="flex items-center justify-center gap-2 px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] cursor-pointer h-full"
+          >
             <p>Most Recent </p>
             {arrowDown}
           </div>

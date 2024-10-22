@@ -3,6 +3,7 @@ import { tableData } from "./data";
 import { arrowDown, arrowRight } from "./Svgs";
 
 const MobileTabulatedData = () => {
+  
   //   const [isCollapsed, setIsCollapsed] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
 
