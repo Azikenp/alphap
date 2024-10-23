@@ -4,7 +4,7 @@ import { blueDot, greenDot } from "./Svgs";
 import { AppContext } from "./context/AppContext";
 
 const TabletTabulatedData = () => {
-  const { displayData } = useContext(AppContext);
+  const { displayData, handleTitleClick } = useContext(AppContext);
 
   console.log(displayData);
 
@@ -31,7 +31,10 @@ const TabletTabulatedData = () => {
         <tbody>
           {displayData.map((item) => (
             <tr key={item.id} className="h-12 text-left">
-              <td className="text-[#334155] text-[14px] font-normal leading-5 px-4">
+              <td
+                onClick={() => handleTitleClick(item)}
+                className="text-[#334155] text-[14px] font-normal xleading-5 px-4 cursor-pointer"
+              >
                 {item.title}
               </td>
               <td className="text-[#334155] text-[14px] font-normal leading-5 px-4">

@@ -29,7 +29,7 @@ const MobileTabulatedData = () => {
                 <div
                   onClick={() => {
                     handleClick(index);
-                    handleTitleClick(data);
+                    // handleTitleClick(data);
                   }}
                   className={`flex items-center  px-[10px] py-[8px] gap-4 cursor-pointer h-10 relative ${
                     activeIndex === index &&
@@ -38,7 +38,10 @@ const MobileTabulatedData = () => {
                 >
                   {activeIndex === index ? arrowDown : arrowRight}
 
-                  <p className="text-[#334155] text-[14px] font-normal leading-5 text-left">
+                  <p
+                    onClick={() => handleTitleClick(data)}
+                    className="text-[#334155] text-[14px] font-normal leading-5 text-left"
+                  >
                     {data.title}
                   </p>
 
