@@ -39,12 +39,12 @@ const Modal = () => {
                 <img
                   src="/modal-img-2.png"
                   alt=""
-                  className="relative z-20 -ml-4"
+                  className="relative z-20 -ml-2"
                 />
                 <img
                   src="/modal-img-3.png"
                   alt=""
-                  className="relative z-10 -ml-4"
+                  className="relative z-10 -ml-2"
                 />
               </div>
               <p className="text-[#334155] text-[14px] font-normal leading-5">

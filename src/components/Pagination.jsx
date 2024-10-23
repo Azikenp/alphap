@@ -4,7 +4,7 @@ const Pagination = () => {
   
   return (
     <div>
-      <div className="flex items-center justify-between px-5">
+      <div className="flex items-center justify-between px-5 mb-24">
         <div className="flex items-center gap-4">
           <div className="w-9 h-9 p-2 flex items-center justify-center rounded-[2px] bg-[#E2E8F0] cursor-pointer">
             {prevBtn}

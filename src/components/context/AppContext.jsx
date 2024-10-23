@@ -17,6 +17,27 @@ export const AppProvider = ({ children }) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [isVisible, setIsVisible] = useState(false); //To add the FooterNav
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the scroll position is more than 200px
+      if (window.scrollY > 200) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Function to handle table row click
   const handleTitleClick = (item) => {
     setSelectedItem(item); // Set the clicked item details
@@ -97,6 +118,7 @@ export const AppProvider = ({ children }) => {
         closeModal,
         isModalOpen,
         selectedItem,
+        isVisible
       }}
     >
       {children}

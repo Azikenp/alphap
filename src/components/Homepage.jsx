@@ -1,4 +1,5 @@
 import ContentBody from "./ContentBody";
+import FooterNav from "./FooterNav";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 
@@ -11,6 +12,9 @@ const Homepage = () => {
       </div>
       <div>
         <ContentBody />
+      </div>
+      <div>
+        <FooterNav />
       </div>
     </div>
   );
