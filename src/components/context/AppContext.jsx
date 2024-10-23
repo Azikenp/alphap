@@ -21,7 +21,6 @@ export const AppProvider = ({ children }) => {
   const handleTitleClick = (item) => {
     setSelectedItem(item); // Set the clicked item details
     setIsModalOpen(true); // Open the modal
-    console.log("hi");
     
   };
 

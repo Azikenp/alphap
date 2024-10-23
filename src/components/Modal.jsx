@@ -34,10 +34,18 @@ const Modal = () => {
             </div>
 
             <div className="px-6 flex flex-col gap-4">
-              <div className="flex gap-[-8px]">
-                <img src="/modal-img-1.png" alt="" />
-                <img src="/modal-img-2.png" alt="" />
-                <img src="/modal-img-3.png" alt="" />
+              <div className="flex gap-0">
+                <img src="/modal-img-1.png" alt="" className="relative z-30" />
+                <img
+                  src="/modal-img-2.png"
+                  alt=""
+                  className="relative z-20 -ml-4"
+                />
+                <img
+                  src="/modal-img-3.png"
+                  alt=""
+                  className="relative z-10 -ml-4"
+                />
               </div>
               <p className="text-[#334155] text-[14px] font-normal leading-5">
                 3 Guest Speakers: {selectedItem.speaker}, Speaker name B,
