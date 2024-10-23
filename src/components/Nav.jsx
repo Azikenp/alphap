@@ -10,7 +10,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="hidden md:flex">
+    <div className="hidden md:flex h-screen sticky top-0">
       <div className="p-2 flex flex-col gap-4 border-r-[1px] border-[#F1F5F9] h-screen">
         <div className="p-2">
           <img

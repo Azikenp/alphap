@@ -10,7 +10,7 @@ const Homepage = () => {
         <Nav />
         <MobileNav />
       </div>
-      <div>
+      <div className="flex-1 overflow-y-auto">
         <ContentBody />
       </div>
       <div>
