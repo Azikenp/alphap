@@ -22,7 +22,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const handleScroll = () => {
       // Check if the scroll position is more than 200px
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
