@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { menuOneCollapsed, menuTwoCollapsed } from "./data";
+import { redDot } from "./Svgs";
 
 const Nav = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -47,11 +48,16 @@ const Nav = () => {
           <div>
             <div className="w-full flex p-2 items-center cursor-pointer h-[36px]">
               <div className="w-full flex items-center gap-4">
-                <img
-                  className="w-4 h-4"
-                  src="/icons/notifications-icon.png"
-                  alt=""
-                />
+                <div className="relative">
+                  <img
+                    className="w-4 h-4"
+                    src="/icons/notifications-icon.png"
+                    alt=""
+                  />
+                  {isCollapsed && (
+                    <div className="absolute -top-1 -right-1">{redDot}</div>
+                  )}
+                </div>
                 {!isCollapsed && (
                   <div className="w-[172px]">
                     <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
@@ -93,7 +99,9 @@ const Nav = () => {
             >
               <img
                 className="w-3 h-3"
-                src="/icons/collapse-icon.png"
+                src={`/icons/${
+                  isCollapsed ? "collapse-icon2.svg" : "collapse-icon.png"
+                }`}
                 alt=""
               />
               {!isCollapsed && (

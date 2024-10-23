@@ -188,3 +188,15 @@ export const blueDot = (
     <circle cx="8" cy="8" r="3" fill="#3B82F6" />
   </svg>
 );
+
+export const redDot = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="6"
+    height="6"
+    viewBox="0 0 6 6"
+    fill="none"
+  >
+    <circle cx="3" cy="3" r="3" fill="#F43F5E" />
+  </svg>
+);
