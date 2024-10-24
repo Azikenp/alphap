@@ -14,8 +14,8 @@ const MobileNav = () => {
   //{`${isOpen? "h-screen" : "h-0"}`}
 
   return (
-    <div className={`${isOpen ? "h-screen" : ""} md:hidden dark:bg-[#484554]`}>
-      <div className="border-b-[1px] border-[#E2E8F0] mb-[8px]">
+    <div className={`${isOpen ? "h-screen" : ""} md:hidden dark:bg-[#484554] mb-4`}>
+      <div className="border-b-[1px] border-[#E2E8F0] dark:border-none mb-[8px]">
         <div className="flex items-center justify-between p-[16px]">
           <div className="w-[64px] h-[32px] cursor-pointer">
             <img className="w-full h-full" src="/Logo.png" alt="logo" />

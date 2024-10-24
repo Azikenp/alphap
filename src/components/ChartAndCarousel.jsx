@@ -4,10 +4,10 @@ import Chart from "./Chart";
 const ChartAndCarousel = () => {
   return (
     <div className="flex flex-col gap-[21px]">
-      <h3 className="ml-7 text-[#000000] dark:text-[#fff] font-medium text-[17px] leading-3">
+      <h3 className="ml-5 md:ml-7 text-[#000000] dark:text-[#fff] font-medium text-[17px] leading-3">
         Event Registrations per month
       </h3>
-      <div className="flex flex-col gap-[21px] lg:flex-row">
+      <div className="flex px-5 lg:px-0 flex-col gap-[21px] lg:flex-row">
         <Chart />
         <Carousel />
       </div>

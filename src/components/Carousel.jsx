@@ -55,7 +55,7 @@ const Carousel = () => {
   }, [currentIndex]);
 
   return (
-    <div className="px-5 flex-1">
+    <div className="lg:px-5 flex-1">
       {/* Display the current item */}
       <div className="h-[320px] lg:h-[299px] w-full shrink-0 relative overflow-hidden">
         {carousel.map((item, index) => (

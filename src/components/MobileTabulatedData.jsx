@@ -17,7 +17,7 @@ const MobileTabulatedData = () => {
   return (
     <div className="lg:hidden md:mt-10">
       <div>
-        <div className="flex items-center justify-between px-4 bg-[#f1f5f9] h-12 text-[#64748b] text-[12px] font-semibold leading-4 text-left">
+        <div className="flex items-center justify-between px-4 bg-[#f1f5f9] dark:bg-[#6A6676] h-12 text-[#64748b] dark:text-[#FCF7FF] text-[12px] font-semibold leading-4 text-left">
           <p>Event Name</p>
           <p className="mr-4">Status</p>
         </div>
@@ -31,16 +31,16 @@ const MobileTabulatedData = () => {
                     handleClick(index);
                     // handleTitleClick(data);
                   }}
-                  className={`flex items-center  px-[10px] py-[8px] gap-4 cursor-pointer h-10 relative ${
+                  className={`flex items-center  px-[10px] py-[8px] gap-4 cursor-pointer h-10 relative dark:bg-[#484554] ${
                     activeIndex === index &&
-                    "p-4 border-b border-[#FCF7FF] bg-[#F2F2F7]"
+                    "p-4 border-b border-[#FCF7FF] dark:border-[#484554] bg-[#F2F2F7] dark:bg-[#514E5D]"
                   }`}
                 >
                   {activeIndex === index ? arrowDown : arrowRight}
 
                   <p
                     onClick={() => handleTitleClick(data)}
-                    className="text-[#334155] text-[14px] font-normal leading-5 text-left"
+                    className="text-[#334155] dark:text-[#FCF7FF] text-[14px] font-normal leading-5 text-left"
                   >
                     {data.title}
                   </p>
@@ -59,7 +59,7 @@ const MobileTabulatedData = () => {
                 </div>
 
                 {activeIndex === index && (
-                  <div className="flex items-center justify-between gap-4 cursor-pointer h-10 text-[#334155] text-[14px] font-normal leading-5 p-4 border-b border-[#FCF7FF] bg-[#f5f5f5] mt-[1px]">
+                  <div className="flex items-center justify-between gap-4 cursor-pointer h-10 text-[#334155] dark:text-[#FCF7FF] text-[14px] font-normal leading-5 p-4 border-b border-[#FCF7FF] dark:border-[#ADA9BB] bg-[#f5f5f5] dark:bg-[#383544] mt-[1px]">
                     <p>{data.speaker}</p>
                     <p>{data.date}</p>
                   </div>

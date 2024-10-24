@@ -9,7 +9,7 @@ const chartSetting = {
 
 export default function GridDemo() {
   return (
-    <div className="flex-1 ml-7 w-full h-full dark:bg-[#484554]">
+    <div className="flex-1 lg:ml-7 w-full h-full dark:bg-[#484554]">
       <div>
         <div>
           <BarChart
