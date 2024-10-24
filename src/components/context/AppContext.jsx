@@ -19,10 +19,12 @@ export const AppProvider = ({ children }) => {
 
   const [isVisible, setIsVisible] = useState(false); //To add the FooterNav
 
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       // Check if the scroll position is more than 200px
-      if (window.scrollY > 100) {
+      if (window.scrollY > 80) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -30,19 +32,27 @@ export const AppProvider = ({ children }) => {
     };
 
     // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleDarkMode = () => {
+    const root = window.document.documentElement;
+    const newTheme = isDarkMode ? "light" : "dark";
+    setIsDarkMode(!isDarkMode);
+
+    // Apply the dark mode class to the html element
+    root.classList.toggle("dark");
+  };
 
   // Function to handle table row click
   const handleTitleClick = (item) => {
     setSelectedItem(item); // Set the clicked item details
     setIsModalOpen(true); // Open the modal
-    
   };
 
   // Function to close the modal
@@ -118,7 +128,8 @@ export const AppProvider = ({ children }) => {
         closeModal,
         isModalOpen,
         selectedItem,
-        isVisible
+        isVisible,
+        toggleDarkMode,
       }}
     >
       {children}

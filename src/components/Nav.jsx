@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { menuOneCollapsed, menuTwoCollapsed } from "./data";
 import { redDot } from "./Svgs";
+import { AppContext } from "./context/AppContext";
 
 const Nav = () => {
+  const { toggleDarkMode } = useContext(AppContext);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleClick = () => {
@@ -115,7 +117,10 @@ const Nav = () => {
 
             {!isCollapsed && (
               <div className="flex gap-2 px-2 items-center my-2">
-                <div className="w-6 h-4 flex items-center p-[2px] bg-[#E2E8F0] rounded-full cursor-pointer">
+                <div
+                  onClick={toggleDarkMode}
+                  className="w-6 h-4 flex items-center p-[2px] bg-[#E2E8F0] rounded-full cursor-pointer"
+                >
                   <div className="w-[50%] h-full rounded-full bg-[#fff]"></div>
                 </div>
                 <p className="text-[#334155] text-[12px] font-normal leading-4">
