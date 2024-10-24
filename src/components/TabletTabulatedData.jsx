@@ -9,48 +9,46 @@ const TabletTabulatedData = () => {
   console.log(displayData);
 
   return (
-    <div className="hidden lg:flex">
+    <div className="hidden lg:flex px-7">
       <table className="w-full">
-        <thead className="bg-[#F1F5F9] h-12">
+        <thead className="bg-[#F1F5F9] text-[#64748b] dark:text-[#fff] dark:bg-[#6A6676] h-12">
           <tr>
-            <th className="text-[#64748b] text-[12px] font-semibold leading-4 text-left px-4 w-[269px]">
+            <th className="text-[12px] font-semibold leading-4 text-left px-4 w-[269px]">
               Event Name
             </th>
-            <th className="text-[#64748b] text-[12px] font-semibold leading-4 text-left px-4 w-[269px]">
+            <th className="text-[12px] font-semibold leading-4 text-left px-4 w-[269px]">
               Date
             </th>
-            <th className="text-[#64748b] text-[12px] font-semibold leading-4 text-left px-4">
+            <th className="text-[12px] font-semibold leading-4 text-left px-4">
               Speaker
             </th>
-            <th className="text-[#64748b] text-[12px] font-semibold leading-4 text-left px-4">
+            <th className="text-[12px] font-semibold leading-4 text-left px-4">
               Status
             </th>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className="dark:bg-[#484554] text-[#334155] dark:text-[#fff]">
           {displayData.map((item) => (
             <tr key={item.id} className="h-12 text-left">
               <td
                 onClick={() => handleTitleClick(item)}
-                className="text-[#334155] text-[14px] font-normal xleading-5 px-4 cursor-pointer"
+                className="text-[14px] font-normal xleading-5 px-4 cursor-pointer"
               >
                 {item.title}
               </td>
-              <td className="text-[#334155] text-[14px] font-normal leading-5 px-4">
+              <td className="text-[14px] font-normal leading-5 px-4">
                 {item.date}
               </td>
-              <td className="text-[#334155] text-[14px] font-normal leading-5 px-4">
+              <td className="text-[14px] font-normal leading-5 px-4">
                 {item.speaker}
               </td>
-              <td
-                className={`text-[#334155] text-[12px] font-normal leading-5 px-4 `}
-              >
+              <td className={`text-[12px] font-normal leading-5 px-4 `}>
                 <div
-                  className={`flex items-center gap-2 justify-center px-4 py-[2px] rounded-[30px] w-fit ${
+                  className={`flex items-center gap-2 justify-center px-4 py-[2px] rounded-[30px] w-fit dark:border  ${
                     item.status === "Completed"
-                      ? "bg-[#D1FAE5]"
-                      : "bg-[#DBEAFE]"
+                      ? "bg-[#D1FAE5] dark:bg-transparent dark:border-[#65DDB5]"
+                      : "bg-[#DBEAFE] dark:bg-transparent dark:border-[#77B1FF]"
                   }`}
                 >
                   {item.status === "Completed" ? greenDot : blueDot}

@@ -9,15 +9,12 @@ const chartSetting = {
 
 export default function GridDemo() {
   return (
-    <div className="flex-1 px-5 w-full h-full">
+    <div className="flex-1 ml-7 w-full h-full dark:bg-[#484554]">
       <div>
-        <h3 className="text-[#000000] font-medium text-[17px] leading-3">
-          Event Registrations per month
-        </h3>
         <div>
           <BarChart
             dataset={dataset}
-            xAxis={[{ scaleType: "band", dataKey: "month" , }]}
+            xAxis={[{ scaleType: "band", dataKey: "month" }]}
             series={[
               { dataKey: "registrations", valueFormatter, color: "#8576FF" },
             ]}

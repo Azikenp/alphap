@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col md:flex-row dark:bg-[#383544]">
+    <div className="flex flex-col md:flex-row">
       <div>
         <Nav />
         <MobileNav />

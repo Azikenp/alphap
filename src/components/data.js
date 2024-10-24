@@ -10,7 +10,7 @@ export const menuTwo = [
 ];
 
 export const menuOneCollapsed = [
-  { title: "home", src: "/icons/home-icon.png", src2: "/icons/home-icon.png" },
+  // { title: "home", src: "/icons/home-icon.png", src2: "/icons/home-icon.png" },
   {
     title: "events",
     src2: "/icons/events-icon-collapsed.svg",

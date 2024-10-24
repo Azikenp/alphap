@@ -42,7 +42,7 @@ export const AppProvider = ({ children }) => {
 
   const toggleDarkMode = () => {
     const root = window.document.documentElement;
-    const newTheme = isDarkMode ? "light" : "dark";
+    // const newTheme = isDarkMode ? "light" : "dark";
     setIsDarkMode(!isDarkMode);
 
     // Apply the dark mode class to the html element

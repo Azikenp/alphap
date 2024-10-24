@@ -12,7 +12,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="hidden md:flex h-screen sticky top-0">
+    <div className="hidden md:flex h-screen sticky top-0 dark:bg-[#484554]">
       <div className="p-2 flex flex-col gap-4 border-r-[1px] border-[#F1F5F9] h-screen">
         <div className="p-2">
           <img
@@ -23,6 +23,17 @@ const Nav = () => {
         </div>
 
         <div className="flex flex-col gap-2">
+          <div className="w-full flex p-2 items-center gap-4 cursor-pointer h-[36px] bg-[#FCF7FF] dark:bg-[#8576FF] text-[#8576FF] dark:text-[#FCF7FF]">
+            <img className="w-5 h-5" src="/icons/home-icon.png" alt="" />
+            {!isCollapsed && (
+              <div className="w-[172px]">
+                <p className="text-[14px] font-normal leading-5 capitalize">
+                  Home
+                </p>
+              </div>
+            )}
+          </div>
+
           <div>
             {menuOneCollapsed.map((item) => {
               return (
@@ -37,7 +48,7 @@ const Nav = () => {
                   />
                   {!isCollapsed && (
                     <div className="w-[172px]">
-                      <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
+                      <p className="text-[#334155] dark:text-[#fff] text-[14px] font-normal leading-5 capitalize">
                         {item.title}
                       </p>
                     </div>
@@ -62,7 +73,7 @@ const Nav = () => {
                 </div>
                 {!isCollapsed && (
                   <div className="w-[172px]">
-                    <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
+                    <p className="text-[#334155] dark:text-[#fff] text-[14px] font-normal leading-5 capitalize">
                       notifications
                     </p>
                   </div>
@@ -86,7 +97,7 @@ const Nav = () => {
                   <img className="w-4 h-4" src={item.src} alt="" />
                   {!isCollapsed && (
                     <div className="w-[172px]">
-                      <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
+                      <p className="text-[#334155] dark:text-[#fff] text-[14px] font-normal leading-5 capitalize">
                         {item.title}
                       </p>
                     </div>
@@ -108,7 +119,7 @@ const Nav = () => {
               />
               {!isCollapsed && (
                 <div className="w-[172px]">
-                  <p className="text-[#334155] text-[14px] font-normal leading-5 capitalize">
+                  <p className="text-[#334155] dark:text-[#fff]  text-[14px] font-normal leading-5 capitalize">
                     collapse
                   </p>
                 </div>
@@ -123,7 +134,7 @@ const Nav = () => {
                 >
                   <div className="w-[50%] h-full rounded-full bg-[#fff]"></div>
                 </div>
-                <p className="text-[#334155] text-[12px] font-normal leading-4">
+                <p className="text-[#334155] dark:text-[#fff]  text-[12px] font-normal leading-4">
                   Dark mode
                 </p>
               </div>
@@ -133,8 +144,10 @@ const Nav = () => {
               <img src="/icons/profile-icon.png" alt="profile-img" />
               {!isCollapsed && (
                 <div className="text-[12px] font-normal">
-                  <h3 className="text-[#334155] leading-4">Rudra Devi</h3>
-                  <p className="text-[#64748B] text-[12px] leading-4">
+                  <h3 className="text-[#334155] dark:text-[#fff] leading-4">
+                    Rudra Devi
+                  </h3>
+                  <p className="text-[#64748B] dark:text-[#fff] text-[12px] leading-4">
                     rudra.devi@gmail.com
                   </p>
                 </div>
