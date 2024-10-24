@@ -9,18 +9,18 @@ const Modal = () => {
     <>
       {isModalOpen && selectedItem && (
         <div className="fixed top-0 flex items-center justify-center z-10 w-full h-full bg-black/30">
-          <div className="flex flex-col gap-6 md:w-[440px] bg-[#fff] pt-6">
+          <div className="flex flex-col gap-6 md:w-[440px] bg-[#fff] dark:bg-[#484554] pt-6">
             <div className="px-6 flex gap-4 justify-between">
               <div>
-                <p className="text-[#334155] text-[18px] font-semibold leading-7">
+                <p className="text-[#334155] dark:text-[#FCF7FF] text-[18px] font-semibold leading-7">
                   {selectedItem.title}
                 </p>
-                <p className="text-[#64748B] text-[14px] font-normal leading-5">
+                <p className="text-[#64748B] dark:text-[#FCF7FF] text-[14px] font-normal leading-5">
                   {selectedItem.date}
                 </p>
               </div>
               <button
-                className="flex items-center justify-center w-6 h-6 p-1 rounded-full border border-[#E2E8F0]"
+                className="flex items-center justify-center w-6 h-6 p-1 rounded-full border border-[#E2E8F0] dark:border-[#484554] dark:bg-[#ADA9BB]"
                 onClick={closeModal}
               >
                 {closeSvg}
@@ -28,7 +28,7 @@ const Modal = () => {
             </div>
 
             <div className="px-6">
-              <p className="text-[#334155] text-[14px] font-normal leading-5">
+              <p className="text-[#334155] dark:text-[#FCF7FF] text-[14px] font-normal leading-5">
                 Event Description
               </p>
             </div>
@@ -47,13 +47,13 @@ const Modal = () => {
                   className="relative z-10 -ml-2"
                 />
               </div>
-              <p className="text-[#334155] text-[14px] font-normal leading-5">
+              <p className="text-[#334155] dark:text-[#FCF7FF] text-[14px] font-normal leading-5">
                 3 Guest Speakers: {selectedItem.speaker}, Speaker name B,
                 Speaker name C. 300 Attendees
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-[10px] p-6 bg-[#F8FAFC] justify-center md:justify-between">
+            <div className="flex flex-col md:flex-row gap-[10px] p-6 bg-[#F8FAFC] dark:bg-[#ADA9BB] justify-center md:justify-between">
               <button className="flex px-4 py-2 justify-center items-center rounded-[2px] border border-[#E2E8F0] bg-[#fff] text-[#334155] text-[14px] font-normal leading-5">
                 Edit
               </button>
