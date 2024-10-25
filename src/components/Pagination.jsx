@@ -1,12 +1,22 @@
-import { arrowDown, nextBtn, prevBtn } from "./Svgs";
+import { useContext } from "react";
+import {
+  arrowDown,
+  arrowDownDark,
+  nextBtn,
+  nextBtnDark,
+  prevBtn,
+  prevBtnDark,
+} from "./Svgs";
+import { AppContext } from "./context/AppContext";
 
 const Pagination = () => {
+  const isDarkMode = useContext(AppContext);
   return (
     <div>
       <div className="flex items-center justify-between px-7 mb-24 md:mb-6">
         <div className="flex items-center gap-4">
           <div className="w-9 h-9 p-2 flex items-center justify-center rounded-[2px] bg-[#E2E8F0] dark:bg-[#484554] cursor-pointer">
-            {prevBtn}
+            {isDarkMode ? prevBtnDark : prevBtn}
           </div>
           <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#8576FF] text-[14px] font-normal leading-5 text-[#fff] cursor-pointer">
             <p>1</p>
@@ -18,7 +28,7 @@ const Pagination = () => {
             <p>3</p>
           </div>
           <div className="w-9 h-9 p-2 flex items-center justify-center rounded-[2px] bg-[#fff] dark:bg-[#484554] border border-[#E2E8F0] dark:border-none cursor-pointer">
-            {nextBtn}
+            {isDarkMode ? nextBtnDark : nextBtn}
           </div>
         </div>
 
@@ -26,7 +36,7 @@ const Pagination = () => {
           <p className="hidden md:block">Show:</p>
           <div className="flex p-2 items-center justify-center gap-2 rounded-[2px] border border-[#E2E8F0] dark:bg-[#484554] dark:border-none cursor-pointer">
             <p>10 rows</p>
-            {arrowDown}
+            {isDarkMode ? arrowDownDark : arrowDown}
           </div>
         </div>
       </div>

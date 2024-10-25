@@ -1,10 +1,17 @@
 import { useContext } from "react";
-import { arrowDown, downloadIcon, verticalDotsIcon } from "./Svgs";
+import {
+  arrowDown,
+  arrowDownDark,
+  downloadIcon,
+  downloadIconDark,
+  verticalDotsIcon,
+  verticalDotsIconDark,
+} from "./Svgs";
 import TabulatedData from "./TabulatedData";
 import { AppContext } from "./context/AppContext";
 
 const Events = () => {
-  const { handleSort, handleSearch, searchQuery, displayData } =
+  const { handleSort, handleSearch, searchQuery, displayData, isDarkMode } =
     useContext(AppContext);
 
   return (
@@ -26,7 +33,7 @@ const Events = () => {
           className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] dark:bg-[#484554] dark:text-[#FCF7FF] dark:border-none cursor-pointer h-full"
         >
           <p className="text-[14px] font-normal leading-5">Date</p>
-          {arrowDown}
+          {isDarkMode ? arrowDownDark : arrowDown}
         </div>
 
         <div
@@ -34,7 +41,7 @@ const Events = () => {
           className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] dark:bg-[#484554] dark:text-[#FCF7FF] dark:border-none cursor-pointer h-full"
         >
           <p className="text-[14px] font-normal leading-5">Status</p>
-          {arrowDown}
+          {isDarkMode ? arrowDownDark : arrowDown}
         </div>
 
         <div
@@ -42,7 +49,7 @@ const Events = () => {
           className="flex gap-2 items-center justify-center px-4 md:px-2 py-2 border border-[#E2E8F0] rounded-[2px] text-[#334155] dark:bg-[#484554] dark:text-[#FCF7FF] dark:border-none cursor-pointer h-full"
         >
           <p className="text-[14px] font-normal leading-5">Name</p>
-          {arrowDown}
+          {isDarkMode ? arrowDownDark : arrowDown}
         </div>
 
         <p className="text-[#334155] dark:text-[#fff] text-[14px] font-semibold leading-5 md:mr-4">
@@ -56,16 +63,16 @@ const Events = () => {
             className="flex items-center justify-center gap-2 px-4 md:px-2 py-2 border border-[#E2E8F0] dark:bg-[#484554] dark:border-none rounded-[2px] cursor-pointer h-full"
           >
             <p>Most Recent </p>
-            {arrowDown}
+            {isDarkMode ? arrowDownDark : arrowDown}
           </div>
         </div>
 
         <div className="flex items-center justify-between md:gap-2 text-[#334155] dark:text-[#FCF7FF] text-[14px]">
           <div className="flex items-center justify-center w-9 h-9 p-2 gap-2 border border-[#E2E8F0] dark:bg-[#484554]  dark:border-none rounded-[2px] cursor-pointer">
-            {verticalDotsIcon}
+            {isDarkMode ? verticalDotsIconDark : verticalDotsIcon}
           </div>
           <div className="flex items-center justify-center gap-2 px-4 md:px-2 py-2 border border-[#E2E8F0] dark:bg-[#484554] dark:border-none rounded-[2px] cursor-pointer">
-            {downloadIcon}
+            {isDarkMode ? downloadIconDark : downloadIcon}
             <p>Export</p>
           </div>
         </div>

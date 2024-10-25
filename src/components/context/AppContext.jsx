@@ -130,6 +130,7 @@ export const AppProvider = ({ children }) => {
         selectedItem,
         isVisible,
         toggleDarkMode,
+        isDarkMode
       }}
     >
       {children}

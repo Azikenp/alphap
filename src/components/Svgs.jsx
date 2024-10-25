@@ -52,6 +52,35 @@ export const metricSvg = (
   </svg>
 );
 
+export const metricSvgDark = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+  >
+    <path
+      d="M8 8.66666V9.99999"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M8.33329 5.99999C8.33329 6.18409 8.18405 6.33332 7.99996 6.33332C7.81586 6.33332 7.66663 6.18409 7.66663 5.99999C7.66663 5.81589 7.81586 5.66666 7.99996 5.66666C8.18405 5.66666 8.33329 5.81589 8.33329 5.99999Z"
+      stroke="white"
+    />
+    <path
+      d="M12.8333 7.99999C12.8333 10.6694 10.6693 12.8333 7.99996 12.8333C5.33058 12.8333 3.16663 10.6694 3.16663 7.99999C3.16663 5.33061 5.33058 3.16666 7.99996 3.16666C10.6693 3.16666 12.8333 5.33061 12.8333 7.99999Z"
+      stroke="white"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 export const nextBtn = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +92,24 @@ export const nextBtn = (
     <path
       d="M5.375 4.375L7.125 6L5.375 7.625"
       stroke="#334155"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const nextBtnDark = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+  >
+    <path
+      d="M8.95837 7.29169L11.875 10L8.95837 12.7084"
+      stroke="#8576FF"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -88,6 +135,24 @@ export const prevBtn = (
   </svg>
 );
 
+export const prevBtnDark = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+  >
+    <path
+      d="M11.0417 7.29169L8.125 10L11.0417 12.7084"
+      stroke="#8576FF"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 export const arrowDown = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +171,24 @@ export const arrowDown = (
   </svg>
 );
 
+export const arrowDownDark = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+  >
+    <path
+      d="M10.1667 7.16666L8.00004 9.5L5.83337 7.16666"
+      stroke="#FCF7FF"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 export const downloadIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +200,24 @@ export const downloadIcon = (
     <path
       d="M3.16663 9.83341V10.8334C3.16663 11.938 4.06206 12.8334 5.16663 12.8334H10.8333C11.9379 12.8334 12.8333 11.938 12.8333 10.8334V9.83341M7.99996 9.50008V3.16675M7.99996 9.50008L5.83329 7.16675M7.99996 9.50008L10.1666 7.16675"
       stroke="#141414"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const downloadIconDark = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+  >
+    <path
+      d="M3.1665 9.83333V10.8333C3.1665 11.9379 4.06193 12.8333 5.1665 12.8333H10.8332C11.9377 12.8333 12.8332 11.9379 12.8332 10.8333V9.83333M7.99984 9.5V3.16666M7.99984 9.5L5.83317 7.16666M7.99984 9.5L10.1665 7.16666"
+      stroke="#FCF7FF"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -143,6 +244,29 @@ export const verticalDotsIcon = (
     <path
       d="M10.4166 14.1667C10.4166 14.3969 10.2301 14.5834 9.99998 14.5834C9.76986 14.5834 9.58331 14.3969 9.58331 14.1667C9.58331 13.9366 9.76986 13.7501 9.99998 13.7501C10.2301 13.7501 10.4166 13.9366 10.4166 14.1667Z"
       stroke="#141414"
+    />
+  </svg>
+);
+
+export const verticalDotsIconDark = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+  >
+    <path
+      d="M10.4166 5.83333C10.4166 6.06345 10.23 6.25 9.99992 6.25C9.7698 6.25 9.58325 6.06345 9.58325 5.83333C9.58325 5.60321 9.7698 5.41666 9.99992 5.41666C10.23 5.41666 10.4166 5.60321 10.4166 5.83333Z"
+      stroke="#FCF7FF"
+    />
+    <path
+      d="M10.4166 10C10.4166 10.2301 10.23 10.4167 9.99992 10.4167C9.7698 10.4167 9.58325 10.2301 9.58325 10C9.58325 9.76988 9.7698 9.58333 9.99992 9.58333C10.23 9.58333 10.4166 9.76988 10.4166 10Z"
+      stroke="#FCF7FF"
+    />
+    <path
+      d="M10.4166 14.1667C10.4166 14.3968 10.23 14.5833 9.99992 14.5833C9.7698 14.5833 9.58325 14.3968 9.58325 14.1667C9.58325 13.9365 9.7698 13.75 9.99992 13.75C10.23 13.75 10.4166 13.9365 10.4166 14.1667Z"
+      stroke="#FCF7FF"
     />
   </svg>
 );

@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { metrics } from "./data";
-import { metricSvg } from "./Svgs";
+import { metricSvg, metricSvgDark } from "./Svgs";
+import { AppContext } from "./context/AppContext";
 
 const Metrics = () => {
+  const isDarkMode = useContext(AppContext);
   return (
     <div>
       <div className="flex flex-col gap-3 px-5 md:px-7 md:py-8">
@@ -19,7 +22,7 @@ const Metrics = () => {
                   <p className="text-[16px] font-semibold leading-6">
                     {metric.title}
                   </p>
-                  {metricSvg}
+                  {isDarkMode ? metricSvgDark : metricSvg}
                 </div>
 
                 <div className="flex gap-1 items-center">
