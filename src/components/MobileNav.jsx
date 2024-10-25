@@ -99,9 +99,13 @@ const MobileNav = () => {
           <div className="flex gap-2 px-2 items-center">
             <div
               onClick={toggleDarkMode}
-              className="w-6 h-4 flex items-center p-[2px] bg-[#E2E8F0] rounded-full cursor-pointer"
+              className="w-6 h-4 flex items-center p-[2px] bg-[#E2E8F0] dark:bg-[#8576FF] rounded-full cursor-pointer"
             >
-              <div className="w-[50%] h-full rounded-full bg-[#fff]"></div>
+              <div
+                className={`w-[50%] h-full rounded-full bg-white transition-transform ${
+                  isDarkMode ? "translate-x-full" : ""
+                }`}
+              ></div>
             </div>
             <p className="text-[#334155] dark:text-[#FCF7FF] text-[12px] font-normal leading-4">
               Dark mode
