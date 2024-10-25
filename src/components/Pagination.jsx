@@ -13,7 +13,7 @@ const Pagination = () => {
   const isDarkMode = useContext(AppContext);
   return (
     <div>
-      <div className="flex items-center justify-between px-7 mb-24 md:mb-6">
+      <div className="flex items-center justify-between px-7 mb-20 md:mb-6">
         <div className="flex items-center gap-4">
           <div className="w-9 h-9 p-2 flex items-center justify-center rounded-[2px] bg-[#E2E8F0] dark:bg-[#484554] cursor-pointer">
             {isDarkMode ? prevBtnDark : prevBtn}

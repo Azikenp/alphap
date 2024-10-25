@@ -1,10 +1,10 @@
 import { useState, useContext } from "react";
 // import { tableData } from "./data";
-import { arrowDown, arrowRight } from "./Svgs";
+import { arrowDown, arrowDownDark, arrowRight, arrowRightDark } from "./Svgs";
 import { AppContext } from "./context/AppContext";
 
 const MobileTabulatedData = () => {
-  const { displayData, handleTitleClick } = useContext(AppContext);
+  const { displayData, handleTitleClick, isDarkMode } = useContext(AppContext);
 
   //   const [isCollapsed, setIsCollapsed] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -36,7 +36,13 @@ const MobileTabulatedData = () => {
                     "p-4 border-b border-[#FCF7FF] dark:border-[#484554] bg-[#F2F2F7] dark:bg-[#514E5D]"
                   }`}
                 >
-                  {activeIndex === index ? arrowDown : arrowRight}
+                  {activeIndex === index
+                    ? isDarkMode
+                      ? arrowDownDark
+                      : arrowDown
+                    : isDarkMode
+                    ? arrowRightDark
+                    : arrowRight}
 
                   <p
                     onClick={() => handleTitleClick(data)}

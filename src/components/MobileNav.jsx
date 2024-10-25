@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import { closeSvg } from "./Svgs";
+import { closeSvg, closeSvgDark, hamburgerIconDark } from "./Svgs";
 import { menuOne, menuTwo } from "./data";
 import { AppContext } from "./context/AppContext";
 
 const MobileNav = () => {
-  const { toggleDarkMode } = useContext(AppContext);
+  const { toggleDarkMode, isDarkMode } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -14,7 +14,9 @@ const MobileNav = () => {
   //{`${isOpen? "h-screen" : "h-0"}`}
 
   return (
-    <div className={`${isOpen ? "h-screen" : ""} md:hidden dark:bg-[#484554] mb-4`}>
+    <div
+      className={`${isOpen ? "h-screen" : ""} md:hidden dark:bg-[#484554] mb-4`}
+    >
       <div className="border-b-[1px] border-[#E2E8F0] dark:border-none mb-[8px]">
         <div className="flex items-center justify-between p-[16px]">
           <div className="w-[64px] h-[32px] cursor-pointer">
@@ -22,10 +24,14 @@ const MobileNav = () => {
           </div>
           <div className="cursor-pointer" onClick={handleClick}>
             {!isOpen ? (
-              <img src="/icons/hamburger-menu-broken.svg" alt="menu" />
+              isDarkMode ? (
+                hamburgerIconDark
+              ) : (
+                <img src="/icons/hamburger-menu-broken.svg" alt="menu" />
+              )
             ) : (
               <div className="flex items-center justify-center border-2 border-gray-100 rounded-full p-[4px]">
-                {closeSvg}
+                {isDarkMode ? closeSvgDark : closeSvg}
               </div>
             )}
           </div>
