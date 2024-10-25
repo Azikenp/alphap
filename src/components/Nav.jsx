@@ -4,7 +4,7 @@ import { redDot } from "./Svgs";
 import { AppContext } from "./context/AppContext";
 
 const Nav = () => {
-  const { toggleDarkMode } = useContext(AppContext);
+  const { toggleDarkMode, isDarkMode } = useContext(AppContext);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleClick = () => {
@@ -24,7 +24,11 @@ const Nav = () => {
 
         <div className="flex flex-col gap-2">
           <div className="w-full flex p-2 items-center gap-4 cursor-pointer h-[36px] bg-[#FCF7FF] dark:bg-[#8576FF] text-[#8576FF] dark:text-[#FCF7FF]">
-            <img className="w-5 h-5" src="/icons/home-icon.png" alt="" />
+            {isDarkMode ? (
+              <img className="w-5 h-5" src="/icons/home-dark.svg" alt="" />
+            ) : (
+              <img className="w-5 h-5" src="/icons/home-icon.png" alt="" />
+            )}
             {!isCollapsed && (
               <div className="w-[172px]">
                 <p className="text-[14px] font-normal leading-5 capitalize">
@@ -43,7 +47,15 @@ const Nav = () => {
                 >
                   <img
                     className="w-5 h-5"
-                    src={isCollapsed ? item.src2 : item.src}
+                    src={
+                      isCollapsed
+                        ? item.src2
+                        : isDarkMode
+                        ? item.src3
+                          ? item.src3
+                          : item.src
+                        : item.src
+                    }
                     alt={item.title}
                   />
                   {!isCollapsed && (

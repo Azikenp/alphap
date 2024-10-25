@@ -50,7 +50,13 @@ const MobileNav = () => {
                 key={item.title}
                 className=" w-full flex p-2 items-center gap-4 cursor-pointer"
               >
-                <img className="w-5 h-5" src={item.src} alt="" />
+                <img
+                  className="w-5 h-5"
+                  src={
+                    isDarkMode ? (item.src3 ? item.src3 : item.src) : item.src
+                  }
+                  alt=""
+                />
                 <p className="text-[#334155] dark:text-[#FCF7FF] text-[14px] font-normal leading-5 capitalize">
                   {item.title}
                 </p>

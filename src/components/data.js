@@ -1,5 +1,9 @@
 export const menuOne = [
-  { title: "home", src: "/icons/home-icon.png" },
+  {
+    title: "home",
+    src: "/icons/home-icon.png",
+    src3: "/icons/home-icon-dark.svg",
+  },
   { title: "events", src: "/icons/events-icon.png" },
   { title: "speakers", src: "/icons/speakers-icon.png" },
   { title: "reports", src: "/icons/reports-icon.png" },
@@ -25,6 +29,7 @@ export const menuOneCollapsed = [
     title: "reports",
     src2: "/icons/reports-icon-collapsed.svg",
     src: "/icons/reports-icon-main.svg",
+    src3: "/icons/reports-icon-dark.svg",
   },
 ];
 
