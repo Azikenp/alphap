@@ -15,7 +15,7 @@ const MobileNav = () => {
 
   return (
     <div
-      className={`${isOpen ? "h-screen" : ""} md:hidden dark:bg-[#484554] mb-4`}
+      className={`${isOpen ? "h-screen fixed z-20 w-screen bg-[#fff]" : ""} md:hidden dark:bg-[#484554] mb-4`}
     >
       <div className="border-b-[1px] border-[#E2E8F0] dark:border-none mb-[8px]">
         <div className="flex items-center justify-between p-[16px]">
@@ -39,7 +39,7 @@ const MobileNav = () => {
       </div>
 
       <div
-        className={`overflow-hidden transition-max-height duration-500 ${
+        className={`overflow-hidden transition-max-height duration-300 ${
           isOpen ? "max-h-full" : "max-h-0"
         }`}
       >
