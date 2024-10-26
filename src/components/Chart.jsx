@@ -2,12 +2,16 @@ import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { chartsGridClasses } from "@mui/x-charts/ChartsGrid";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { dataset, valueFormatter } from "./dataset/weather";
+import { useContext } from "react";
+import { AppContext } from "./context/AppContext";
 
 const chartSetting = {
   height: 300,
 };
 
 export default function GridDemo() {
+  const isDarkMode = useContext(AppContext)
+
   return (
     <div className="flex-1 lg:ml-7 w-full h-full dark:bg-[#484554]">
       <div>
@@ -33,6 +37,9 @@ export default function GridDemo() {
               },
               [`& .${axisClasses.bottom} .${axisClasses.ticks}`]: {
                 display: "none", // Hide bottom axis ticks
+              },
+              "& .MuiChartsAxis-tickLabel":  {
+                color: isDarkMode ? "#fff" : "#334155", // Set text color based on dark mode
               },
             }}
             {...chartSetting}

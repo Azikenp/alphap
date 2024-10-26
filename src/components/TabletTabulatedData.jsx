@@ -30,7 +30,7 @@ const TabletTabulatedData = () => {
 
         <tbody className="dark:bg-[#484554] text-[#334155] dark:text-[#fff]">
           {displayData.map((item) => (
-            <tr key={item.id} className="h-12 text-left">
+            <tr key={item.id} className="h-12 text-left hover:bg-[#f1f5f989] dark:hover:bg-[#6a667645] transition-all">
               <td
                 onClick={() => handleTitleClick(item)}
                 className="text-[14px] font-normal xleading-5 px-4 cursor-pointer"

@@ -43,7 +43,7 @@ const Nav = () => {
               return (
                 <div
                   key={item.title}
-                  className="w-full flex p-2 items-center gap-4 cursor-pointer h-[36px]"
+                  className="w-full flex p-2 items-center gap-4 cursor-pointer h-[36px] hover:bg-[#FCF7FF] dark:hover:bg-[#8576FF] transition-all"
                 >
                   <img
                     className="w-5 h-5"
@@ -71,7 +71,7 @@ const Nav = () => {
           </div>
 
           <div>
-            <div className="w-full flex p-2 items-center cursor-pointer h-[36px]">
+            <div className="w-full flex p-2 items-center cursor-pointer h-[36px] hover:bg-[#FCF7FF] dark:hover:bg-[#8576FF] transition-all">
               <div className="w-full flex items-center gap-4">
                 <div className="relative">
                   <img
@@ -104,7 +104,7 @@ const Nav = () => {
               return (
                 <div
                   key={item.title}
-                  className=" w-full flex p-2 items-center gap-4 cursor-pointer"
+                  className=" w-full flex p-2 items-center gap-4 cursor-pointer hover:bg-[#FCF7FF] dark:hover:bg-[#8576FF] transition-all"
                 >
                   <img className="w-4 h-4" src={item.src} alt="" />
                   {!isCollapsed && (
@@ -120,7 +120,7 @@ const Nav = () => {
 
             <div
               onClick={handleClick}
-              className=" w-full flex p-2 items-center gap-4 cursor-pointer"
+              className=" w-full flex p-2 items-center gap-4 cursor-pointer hover:bg-[#FCF7FF] dark:hover:bg-[#8576FF] transition-all"
             >
               <img
                 className="w-3 h-3"
@@ -156,7 +156,7 @@ const Nav = () => {
               </div>
             )}
 
-            <div className="flex items-center px-1 py-2 gap-2">
+            <div className="flex items-center px-1 py-2 gap-2 hover:bg-[#FCF7FF] dark:hover:bg-[#8576FF] transition-all">
               <img src="/icons/profile-icon.png" alt="profile-img" />
               {!isCollapsed && (
                 <div className="text-[12px] font-normal">

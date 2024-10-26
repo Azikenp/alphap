@@ -57,7 +57,7 @@ const Carousel = () => {
   return (
     <div className="lg:px-5 flex-1">
       {/* Display the current item */}
-      <div className="h-[320px] lg:h-[299px] w-full shrink-0 relative overflow-hidden">
+      <div className="h-[320px] lg:h-[299px] w-full shrink-0 relative overflow-hidden group">
         {carousel.map((item, index) => (
           <div
             key={index}
@@ -70,7 +70,7 @@ const Carousel = () => {
             }`}
           >
             <img
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover group-hover:scale-105 transition-all"
               src={item.image}
               alt={item.title}
             />

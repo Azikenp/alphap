@@ -16,7 +16,7 @@ const Metrics = () => {
             return (
               <div
                 key={metric.title}
-                className="flex justify-center flex-col gap-1 p-4 border border-[#F2F2F7] dark:border-[#484554] bg-[#ffffff] dark:bg-[#484554] rounded-[2px] md:w-[240px] lg:h-[88px]"
+                className="flex justify-center flex-col gap-1 p-4 border border-[#F2F2F7] dark:border-[#484554] bg-[#ffffff] dark:bg-[#484554] rounded-[2px] md:w-[240px] lg:h-[88px] group"
               >
                 <div className="flex items-center gap-1 text-[#64748B] dark:text-[#fff]">
                   <p className="text-[16px] font-semibold leading-6">
@@ -30,7 +30,7 @@ const Metrics = () => {
                     {metric.subject}
                   </p>
                   <img
-                    className="w-3 h-3"
+                    className="w-3 h-3 group-hover:scale-110 transition-all group-hover:mr-1"
                     src={metric.image}
                     alt="arrow-success"
                   />
