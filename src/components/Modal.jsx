@@ -54,14 +54,14 @@ const Modal = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-[10px] p-6 bg-[#F8FAFC] dark:bg-[#ADA9BB] justify-center md:justify-between">
-              <button className="flex px-4 py-2 justify-center items-center rounded-[2px] border border-[#E2E8F0] bg-[#fff] text-[#334155] text-[14px] font-normal leading-5">
+              <button className="flex px-4 py-2 justify-center items-center rounded-[2px] border border-[#E2E8F0] bg-[#fff] hover:bg-[#E2E8F0] transition-all text-[#334155] text-[14px] font-normal leading-5">
                 Edit
               </button>
               <div className="flex flex-col md:flex-row gap-2">
-                <button className="flex px-4 py-2 justify-center items-center rounded-[2px] bg-[#F43F5E] text-[#fff] text-[14px] font-normal leading-5">
+                <button className="flex px-4 py-2 justify-center items-center rounded-[2px] bg-[#F43F5E] hover:bg-[#f43f5dc4] transition-all text-[#fff] text-[14px] font-normal leading-5">
                   Delete
                 </button>
-                <button className="flex px-4 py-2 justify-center items-center rounded-[2px] bg-[#8576FF] text-[#fff] text-[14px] font-normal leading-5">
+                <button className="flex px-4 py-2 justify-center items-center rounded-[2px] bg-[#8576FF] hover:bg-[#8676ffc0] transition-all text-[#fff] text-[14px] font-normal leading-5">
                   Mark as completed
                 </button>
               </div>
